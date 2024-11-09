@@ -6,13 +6,14 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-// importing home component
+// importing home pages
 import Home from './pages/Home.jsx';
-// import all the componets which we used for routing
+// import all the pages which we used for routing
 import Blogs from './pages/Blogs.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import Services from './pages/Services.jsx';
+import SingleBlog from './components/SingleBlog.jsx';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,13 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services/>
+      },
+      // single blogs path
+      {
+        path: "/blogs/:id",
+        element: <SingleBlog/>,
+        // here to load and get the specific url path for the id's of the blogs
+        loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)
       }
 
     ]

@@ -1,0 +1,57 @@
+/* font style for p in banner */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* insted of applying the style in body we can extend in the tailwind .config.css -- so go and check this out */
+.active{
+    @apply text-[#E63946] underline underline-offset-4
+}
+
+/* to style the three colors */
+/* //  className='blue-[#1D3557] hakf white-[#F1FAEE] red [#E63946]' */
+.tred{
+    color: #E63946;
+}
+.bgblue{
+    background-color: #1D3557;
+}
+.twhite{
+    color: #F1FAEE;
+}
+
+/* pagiantion styles */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    /* margin: 0;
+    padding: 0; */
+}
+
+.pagination li{
+    margin: 0 5px;
+}
+
+.pagination a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.pagination a:hover{
+    background-color: #eee;
+}
+
+.pagination li.activerPagination{
+    background: #E63946;
+    border-radius:  4px;
+    color: #F1FAEE;
+}
+
+/* categories section */
+.active-button{
+    color: #E63946;
+}
